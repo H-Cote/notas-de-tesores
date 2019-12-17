@@ -1,0 +1,151 @@
+\documentclass[12pt]{article}
+\usepackage[spanish]{babel} % espanol
+\usepackage[utf8]{inputenc} % acentos sin codigo
+\usepackage{enumerate} % enumerados
+\usepackage{amsmath}
+\usepackage{tensor} %notación tensorial 
+\usepackage{fancyvrb}
+\usepackage{lipsum}
+\usepackage{dsfont} %Para campos como R,N,Q, etc
+\usepackage{verbatimbox}
+\usepackage{amssymb} %Conjutos:complejos, naturales, reales,etc
+\numberwithin{equation}{section}
+\usepackage{graphicx}
+\providecommand{\abs}[1]{\lvert#1\rvert} %Para usar valor absoluto
+\providecommand{\norm}[1]{\lVert#1\rVert}%Para usar norma
+\usepackage[section]{placeins}
+%\usepackage{times} % Fuente Times New Roman
+
+
+
+\title{\textbf{Introducción a la notación tensorial
+\\\large FACULTAD DE CIENCIAS}}
+\author{\\
+Cote Chavarr\'ia H\'ector Alonso}
+\date{13 diciembre 2019}
+
+
+\begin{document}
+\maketitle
+
+Un vector $\vec{x}$ lo podemos ver como el resultado de multiplicar otro vector $\vec{v}$ por una matriz $A$:
+
+\begin{equation}
+\vec{x}= A\vec{v}
+\end{equation}
+
+Y a su vez a $\vec{x}$ lo podemos ver como una combinación lineal de los elementos de la base del espacio vectorial.
+
+
+\begin{equation}
+\vec{x} = \alpha_1\hat{e}_1 + \alpha_2\hat{e} + ... + \alpha_n\hat{e}_n = \sum_{i=1}^n \alpha_i \hat{e}_i
+\end{equation}
+
+Por lo tanto
+
+\begin{equation}
+\vec{x}= A\vec{v}= \sum_{i=1}^n \alpha_i \hat{e}_i
+\end{equation}
+
+Usando notación de Einstein (quitando el simbolo de suma y  subiendo el índice del escalar)
+
+\begin{equation}
+\vec{x}= A\vec{v}= \alpha^i \hat{e}_i
+\end{equation}
+
+donde cada término de la suma corresponde a una entrada del vector 
+
+\begin{equation}
+\vec{x}=(x_1,x_2,x_3, ... ,x_n)=(\alpha_1\hat{e}_1, \alpha_2\hat{e}_2, \alpha_3\hat{e}_3,...,\alpha_n\hat{e}_n)
+\end{equation}
+
+
+\begin{equation}
+x_i= \alpha^i \hat{e}_i
+\end{equation}
+
+
+Por otro lado al vector $\vec{v}$ también lo podemos como una combinación lineal de los elementos de la base
+
+\begin{equation}
+\vec{v}=\beta^j \hat{e}_j
+\end{equation}
+
+por lo que el vector $\vec{x}$ puede escribirse de la siguiente forma
+
+
+\begin{equation}
+\vec{x}= A({\beta^j \hat{e}_j})= \alpha^i \hat{e}_i
+\end{equation}
+
+Para dar una explicación sencilla consideremos $A\in M_2$ y $\vec{x}, \vec{v}\in  \mathds{R}^2$ 
+
+\begin{equation}
+\vec{x}= A\vec{v}= 
+\left(
+\begin{array}{ccc}
+     a_{11} & a_{12}
+  \\a_{21}& a_{22} 
+  
+\end{array}
+\right)  \cdot   \left(
+\begin{array}{ccc}
+     v_{1} 
+  \\v_{2}
+  
+\end{array}
+\right)=\left(
+\begin{array}{ccc}
+     x_{1} 
+  \\x_{2}
+  
+\end{array}
+\right)
+\end{equation}
+
+notemos que la primera entrada del vector $\vec{x}$ se puede escribir de la siguiente forma
+
+
+\begin{equation}
+x_1= a_{11}v_1+a_{12}v_2
+\end{equation}
+
+de forma más general usando la notación de Einstein
+
+
+\begin{equation}
+x_i= \sum_{i=1}^n a_{ij}v_i=a\indices{^i_j} v_i
+\end{equation}
+
+usando la expresión (0.6)
+
+
+\begin{equation}
+x_i= a\indices{^i_j} v_i= \alpha^i \hat{e}_i
+\end{equation}
+
+o bien 
+
+\begin{equation}
+x_i= a\indices{^i_j} (\beta^j \hat{e}_j)= \alpha^i \hat{e}_i
+\end{equation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
